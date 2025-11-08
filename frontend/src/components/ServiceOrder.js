@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const ServiceOrder = () => {
     const [serviceOrders, setServiceOrders] = useState([]);
@@ -24,6 +25,9 @@ const ServiceOrder = () => {
     return (
         <div>
             <h1>Service Orders</h1>
+            <Link to="/service-orders/new">
+                <button>Register New Service Order</button>
+            </Link>
             <ul>
                 {serviceOrders.map(order => (
                     <li key={order.id}>

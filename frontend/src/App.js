@@ -5,6 +5,8 @@ import Navigation from './components/Navigation';
 import ServiceOrder from './components/ServiceOrder';
 import Quote from './components/Quote';
 import Part from './components/Part';
+import ServiceOrderForm from './components/ServiceOrderForm';
+import PartForm from './components/PartForm';
 
 function Home() {
   return <h2>Welcome to the CRM</h2>;
@@ -22,8 +24,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/service-orders" element={<ServiceOrder />} />
+            <Route path="/service-orders/new" element={<ServiceOrderForm />} />
             <Route path="/quotes" element={<Quote />} />
             <Route path="/inventory" element={<Part />} />
+            <Route path="/inventory/new" element={<PartForm />} />
           </Routes>
         </main>
       </div>

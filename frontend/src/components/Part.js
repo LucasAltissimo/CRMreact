@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Part = () => {
     const [parts, setParts] = useState([]);
@@ -24,6 +25,9 @@ const Part = () => {
     return (
         <div>
             <h1>Inventory Parts</h1>
+            <Link to="/inventory/new">
+                <button>Register New Part</button>
+            </Link>
             <table>
                 <thead>
                     <tr>
